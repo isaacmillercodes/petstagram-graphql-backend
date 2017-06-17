@@ -13,8 +13,21 @@ const UserType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
-    email: { type: GraphQLString},
-    //will add fields for profile pic, pets, and friends in later step
+    email: { type: GraphQLString },
+    friends: {
+      type: new GraphQLList(UserType),
+      resolve(parentValue, args) {
+        return knex('user_friends').where('user_one', parentValue.id).orWhere('user_two', parentValue.id)
+        .join('users', function() {
+          this.on('user_friends.user_one', '=', 'users.id').orOn('user_friends.user_two', '=', 'users.id');
+        }).then(results => {
+          return results.filter(user => {
+            return user.id !== parentValue.id && user.status === 'active';
+          });
+        });
+      }
+    }
+    //will add fields for profile pic and pets in later step
   })
 });
 
