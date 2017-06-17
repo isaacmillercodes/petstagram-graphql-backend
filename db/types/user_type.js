@@ -1,6 +1,5 @@
 const graphql = require('graphql');
 const knex = require('../knex');
-// const ImageType = require('./image_type');
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -13,6 +12,7 @@ const UserType = new GraphQLObjectType({
   name: 'User',
   fields: () => {
     const PetType = require('./pet_type');
+    const ImageType = require('./image_type');
     return {
       id: { type: GraphQLInt },
       name: { type: GraphQLString },
@@ -45,9 +45,15 @@ const UserType = new GraphQLObjectType({
           .join('pets', 'pet_followers.pet_id', '=', 'pets.id')
           .then(results => results);
         }
+      },
+      profile_image: {
+        type: ImageType,
+        resolve(parentValue, args) {
+          return knex('images').where('id', parentValue.profile_image_id)
+          .then(results => results[0]);
+        }
       }
     };
-    //will add field for profile pic later step
   }
 });
 
