@@ -4,7 +4,8 @@ exports.up = knex => {
     table.string('name').notNullable();
     table.string('species');
     table.string('breed');
-    table.integer('age');
+    table.float('age');
+    table.integer('profile_image_id').references('images.id');
   });
 };
 
