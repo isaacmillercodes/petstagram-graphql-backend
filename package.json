@@ -1,0 +1,27 @@
+{
+  "name": "intro-to-graphql-demo",
+  "version": "1.0.0",
+  "description": "A demo back end for a project called Petstagram to help demonstrate the power of GraphQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacmillercodes/petstagram-graphql-demo.git"
+  },
+  "author": "Isaac Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaacmillercodes/petstagram-graphql-demo/issues"
+  },
+  "homepage": "https://github.com/isaacmillercodes/petstagram-graphql-demo#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.1",
+    "knex": "^0.13.0",
+    "pg": "^6.2.4"
+  }
+}
