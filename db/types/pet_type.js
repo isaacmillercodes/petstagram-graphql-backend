@@ -4,6 +4,7 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
+  GraphQLFloat,
   GraphQLList
 } = graphql;
 
@@ -17,7 +18,7 @@ const PetType = new GraphQLObjectType({
       name: { type: GraphQLString },
       species: { type: GraphQLString },
       breed: { type: GraphQLString },
-      age: { type: GraphQLInt },
+      age: { type: GraphQLFloat },
       owners: {
         type: new GraphQLList(UserType),
         resolve(parentValue, args) {
