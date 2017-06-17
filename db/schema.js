@@ -26,6 +26,22 @@ const UserType = new GraphQLObjectType({
           });
         });
       }
+    },
+    pets_owned: {
+      type: new GraphQLList(PetType),
+      resolve(parentValue, args) {
+        return knex('pet_owners').where('owner_id', parentValue.id)
+        .join('pets', 'pet_owners.pet_id', '=', 'pets.id')
+        .then(results => results);
+      }
+    },
+    pets_followed: {
+      type: new GraphQLList(PetType),
+      resolve(parentValue, args) {
+        return knex('pet_followers').where('follower_id', parentValue.id)
+        .join('pets', 'pet_followers.pet_id', '=', 'pets.id')
+        .then(results => results);
+      }
     }
     //will add field for profile pic later step
   })
