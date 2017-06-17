@@ -50,8 +50,8 @@ exports.seed = function(knex, Promise) {
           owner_id: knex('users').where('name', 'Lady Leshurr').select('id')
         },
         {
-          pet_id: knex('pets').where('name', 'Kendrick Lamar').select('id'),
-          owner_id: knex('users').where('name', 'King').select('id')
+          pet_id: knex('pets').where('name', 'King').select('id'),
+          owner_id: knex('users').where('name', 'Kendrick Lamar').select('id')
         }
       ]);
     });
