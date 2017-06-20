@@ -1,6 +1,6 @@
 ** Step 2
 
-* All Users:
+All Users:
 ```js
 {
   users {
@@ -10,7 +10,7 @@
 }
 ```
 
-* Single User:
+Single User:
 ```js
 {
   user(id: 2) {
