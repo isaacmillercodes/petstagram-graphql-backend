@@ -14,7 +14,7 @@ const {
   GraphQLList
 } = graphql;
 
-const mutations = new GraphQLObjectType({
+const RootMutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: () => ({
     addPet: {
@@ -33,4 +33,4 @@ const mutations = new GraphQLObjectType({
   })
 });
 
-module.exports = mutations;
+module.exports = RootMutation;
