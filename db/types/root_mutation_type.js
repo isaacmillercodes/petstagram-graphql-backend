@@ -45,7 +45,7 @@ const RootMutation = new GraphQLObjectType({
         age: { type: GraphQLFloat }
       },
       resolve(parentValue, { owner_id, profile_image_url, name, species, breed, age }) {
-        return db.addImage(profile_image_url)
+        return db.addImage({ image_url: profile_image_url })
         .then(newImage => {
           return db.addPet({ name, species, breed, age, profile_image_id: newImage[0].id })
           .then(newPet => {
@@ -144,6 +144,27 @@ const RootMutation = new GraphQLObjectType({
       resolve(parentValue, { pet_id, follower_id }) {
         return db.addFollower(pet_id, follower_id)
         .then(petFollower => petFollower[0]);
+      }
+    },
+    addImage: {
+      type: ImageType,
+      args: {
+        image_url: { type: new GraphQLNonNull(GraphQLString) },
+        caption: { type: GraphQLString },
+      },
+      resolve(parentValue, { image_url, caption }) {
+        return db.addImage({ image_url, caption })
+        .then(newImage => newImage[0]);
+      }
+    },
+    likeImage: {
+      type: ImageType,
+      args: {
+        image_id: { type: new GraphQLNonNull(GraphQLInt) }
+      },
+      resolve(parentValue, { image_id }) {
+        return db.likeImage(image_id)
+        .then(updatedImage => updatedImage[0]);
       }
     }
   })
