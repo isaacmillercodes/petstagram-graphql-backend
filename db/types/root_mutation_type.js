@@ -157,6 +157,21 @@ const RootMutation = new GraphQLObjectType({
         .then(newImage => newImage[0]);
       }
     },
+    addPetImage: {
+      type: ImageType,
+      args: {
+        pet_id: { type: new GraphQLNonNull(GraphQLInt) },
+        image_url: { type: new GraphQLNonNull(GraphQLString) },
+        caption: { type: GraphQLString },
+      },
+      resolve(parentValue, { pet_id, image_url, caption }) {
+        return db.addImage({ image_url, caption })
+        .then(newImage => {
+          return db.addPetImage(pet_id, newImage[0].id)
+          .then(newPetImage => newImage[0]);
+        });
+      }
+    },
     likeImage: {
       type: ImageType,
       args: {
