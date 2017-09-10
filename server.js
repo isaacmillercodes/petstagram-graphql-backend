@@ -3,6 +3,7 @@ const dotenv = require('dotenv').config();
 const knex = require('./db/knex');
 const morgan = require('morgan');
 const expressGraphQL = require('express-graphql');
+const cors = require('cors');
 const jwt = require('express-jwt');
 const schema = require('./db/schema');
 
@@ -26,7 +27,7 @@ app.use(jwt({
   }
 }));
 
-app.use('/graphql', expressGraphQL({
+app.use('/graphql', cors(), expressGraphQL({
   schema,
   graphiql: true
 }));

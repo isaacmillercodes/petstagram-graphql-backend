@@ -19,6 +19,7 @@
   "homepage": "https://github.com/isaacmillercodes/petstagram-graphql-demo#readme",
   "dependencies": {
     "bcrypt": "^1.0.3",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
