@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/isaacmillercodes/petstagram-graphql-demo#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.1",

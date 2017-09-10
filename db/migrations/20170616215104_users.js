@@ -3,6 +3,7 @@ exports.up = knex => {
     table.increments();
     table.string('name').notNullable();
     table.string('email').notNullable();
+    table.string('password').notNullable();
     table.integer('profile_image_id').references('images.id');
   });
 };
