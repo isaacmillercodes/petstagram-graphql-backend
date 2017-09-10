@@ -1,5 +1,4 @@
 const graphql = require('graphql');
-const knex = require('../knex');
 
 const {
   GraphQLObjectType,

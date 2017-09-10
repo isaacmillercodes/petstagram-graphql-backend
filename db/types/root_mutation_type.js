@@ -6,6 +6,8 @@ const PetType = require('./pet_type');
 const UserType = require('./user_type');
 const ImageType = require('./image_type');
 const LoginResponse = require('./login_response');
+const FriendConnection = require('./friend_connection');
+const PetFollower = require('./pet_follower');
 const db = require('../api/mutation_helpers');
 
 const {
@@ -108,6 +110,40 @@ const RootMutation = new GraphQLObjectType({
         }).catch(noUserFound => {
           return { token: '', user_id: -1, message: 'Incorrect email or password.' };
         });
+      }
+    },
+    friendRequest: {
+      type: FriendConnection,
+      args: {
+        user_one: { type: new GraphQLNonNull(GraphQLInt) },
+        user_two: { type: new GraphQLNonNull(GraphQLInt) }
+      },
+      resolve(parentValue, { user_one, user_two }) {
+        return db.friendRequest(user_one, user_two)
+        .then(friendRequest => friendRequest[0]);
+      }
+    },
+    updateFriendConnection: {
+      type: FriendConnection,
+      args: {
+        user_one: { type: new GraphQLNonNull(GraphQLInt) },
+        user_two: { type: new GraphQLNonNull(GraphQLInt) },
+        status: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve(parentValue, { user_one, user_two, status }) {
+        return db.updateFriendConnection(user_one, user_two, status)
+        .then(friendConnection => friendConnection[0]);
+      }
+    },
+    followPet: {
+      type: PetFollower,
+      args: {
+        pet_id: { type: new GraphQLNonNull(GraphQLInt) },
+        follower_id: { type: new GraphQLNonNull(GraphQLInt) }
+      },
+      resolve(parentValue, { pet_id, follower_id }) {
+        return db.addFollower(pet_id, follower_id)
+        .then(petFollower => petFollower[0]);
       }
     }
   })

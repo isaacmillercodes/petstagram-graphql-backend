@@ -3,6 +3,7 @@ const knex = require('../knex');
 const PetType = require('./pet_type');
 const UserType = require('./user_type');
 const ImageType = require('./image_type');
+const FriendConnection = require('./friend_connection');
 const {
   GraphQLObjectType,
   GraphQLInt,
