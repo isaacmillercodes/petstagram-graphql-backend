@@ -70,7 +70,7 @@ const RootMutation = new GraphQLObjectType({
         profile_image_url: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parentValue, { name, email, password, profile_image_url }) {
-        return db.addImage(profile_image_url)
+        return db.addImage({ image_url: profile_image_url })
         .then(newImage => {
           const hash = bcrypt.hashSync(password, salt);
           return db.addUser({ name, email, password: hash, profile_image_id: newImage[0].id })
