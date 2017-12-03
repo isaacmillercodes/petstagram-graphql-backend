@@ -41,7 +41,7 @@ const PetType = new GraphQLObjectType({
 });
 ```
 
-You might be wondering why I would include a field like total followers. Because GraphQL allows the client to request only the properties it needs, I thought it might be convenient to be able to query just a pet's total number of followers without getting other information about each user that follows them. In my front end GraphQL tutorial (instructions coming soon!), we use this field on the pet profile page.
+You might be wondering why I would include a field like total followers. Because GraphQL allows the client to request only the properties it needs, I thought it might be convenient to be able to query just a pet's total number of followers without getting other information about each user that follows them. In my [front end GraphQL tutorial](https://github.com/isaacmillercodes/petstagram-graphql-frontend) (instructions coming soon!), we use this field on the pet profile page.
 
 Since we've defined our Pet type, now we can update our User type with new associations like the pets any given user owns and the pets they follow.
 
@@ -126,4 +126,4 @@ Refresh Graph*i*QL in your browser and you'll see the documentation updated with
 
 You can always find new sample queries on each step in [SampleQueries.md](https://github.com/isaacmillercodes/petstagram-graphql-backend/blob/step-3-pets/SampleQueries.md).
 
-Once you've experimented with our new resource, checkout to step-4-images-and-refactor or the *step 4 instructions* where we'll add our final type, Image, and clean up our project structure. 
+Once you've experimented with our new resource, checkout to step-4-images-and-refactor or the *step 4 instructions* where we'll add our final type, Image, and clean up our project structure.
