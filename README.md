@@ -83,3 +83,68 @@ const RootQuery = new GraphQLObjectType({
   })
 });
 ```
+
+In our root query, we want to tell GraphQL how to resolve data for all of our parent types.
+
+For all users, we use Knex to return every row from our `users` table. For a single user, we'll take `id` as an argument and just return the user with the corresponding id.
+
+Finally, we'll export our GraphQL schema using our root query.  
+
+```js
+module.exports = new GraphQLSchema({
+  query: RootQuery
+});
+```
+
+With your server running (`nodemon` from the project directory in your command line), go to localhost:5000/graphql in your browser.
+
+This will take you to Graph*i*QL.
+
+![GraphiQL Screenshot](https://i.imgur.com/cUrRUue.png)
+
+You can use the Documentation Explorer to look at the different types you can query. This will update every time you restart the server (which nodemon will do for you on any change) and refresh the browser.
+
+Try these queries in the left pane. For the final query, you can pass in query variables in the by expanding the query variables pane.
+
+All Users:
+```js
+{
+  users {
+    id
+    name
+  }
+}
+```
+
+Single User:
+```js
+{
+  user(id: 2) {
+    id
+    name
+    email
+    friends {
+      name
+    }
+  }
+}
+```
+
+or
+
+```js
+query SingleUser($id: Int){
+  user(id: $id) {
+    id
+    name
+    email
+    friends {
+      name
+    }
+  }
+}
+```
+
+![Using Query Variables](https://i.imgur.com/y03dL5X.png)
+
+Once you've had a chance to explore Graph*i*QL and make some test queries, checkout to step-3-pets or head to the *step 3 instructions*.
