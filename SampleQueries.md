@@ -115,7 +115,7 @@ query SinglePetWithImages($id: Int){
 }
 ```
 
-Get a pet, then an owner
+Get a pet and an owner
 ```js
 query SinglePetandSingleUser($pet_id: Int, $user_id: Int){
   pet(id: $pet_id) {
@@ -161,7 +161,7 @@ mutation AddPet {
 }
 ```
 
-Add two pets at once with aliases:
+Add two pets with aliases:
 ```js
 mutation AddPet {
   addLucille: addPet(
