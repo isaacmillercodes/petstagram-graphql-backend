@@ -16,4 +16,4 @@ module.exports = {
   addOwner,
   addFollower,
   addPetImage
- };
+};

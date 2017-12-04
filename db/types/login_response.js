@@ -13,7 +13,6 @@ const {
 const LoginResponse = new GraphQLObjectType({
   name: 'LoginResponse',
   fields: () => {
-    // const UserType = require('./user_type');
     return {
       token: { type: GraphQLString },
       user_id: { type: GraphQLInt },
