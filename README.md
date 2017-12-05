@@ -1,4 +1,4 @@
-# Step 1 - Project Set Up and Placeholder Schema
+# Step One: Project Set Up and Placeholder Schema
 
 **Quick Disclaimer:**
 
@@ -67,4 +67,4 @@ Graph*i*QL is an in-browser IDE where you can test your queries and view your re
 
 Our schema is where we will define our *Root Query* which will contain all the ways we can access our types.
 
-If you have a running Express server and you see pet objects coming back from our `/pets` endpoint, checkout to branch `step-2-root-query` or view the step 2 instructions **here**.
+If you have a running Express server and you see pet objects coming back from our `/pets` endpoint, checkout to branch `step-2-root-query` or view the [step two instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-2-root-query).
