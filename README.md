@@ -205,4 +205,4 @@ It's important to note that GraphQL executes queries in *parallel*. While you wo
 
 You can imagine how this might make the client more performant. With GraphQL, you don't need to worry about having a promise chain of multiple requests and responses in order to access data from multiple resources.
 
-In our next step, we'll create our first *mutation* for adding a pet. Once you've gotten comfortable with our new structure and tried some new queries, check out to step-5-add-pet-mutation or head to the *step 5 instructions*.
+In our next step, we'll create our first *mutation* for adding a pet. Once you've gotten comfortable with our new structure and tried some new queries, check out to step-5-add-pet-mutation or head to the [step five instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-5-add-pet-mutation).
