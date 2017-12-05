@@ -1,4 +1,4 @@
-# Step 2: Creating a GraphQL Root Query and Object Type
+# Step Two: Creating a GraphQL Root Query and Object Type
 
 In the last step, we got our project set up and referenced a placeholder GraphQL schema. In this step, we'll be filling out that schema with a *root query* that contains our first GraphQL *type*.
 
@@ -147,4 +147,4 @@ query SingleUser($id: Int){
 
 ![Using Query Variables](https://i.imgur.com/y03dL5X.png)
 
-Once you've had a chance to explore Graph*i*QL and make some test queries, checkout to step-3-pets or head to the *step 3 instructions*.
+Once you've had a chance to explore Graph*i*QL and make some test queries, checkout to step-3-pets or head to the [step three instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-3-pets).
