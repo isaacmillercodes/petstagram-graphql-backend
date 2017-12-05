@@ -126,4 +126,4 @@ Refresh Graph*i*QL in your browser and you'll see the documentation updated with
 
 You can always find new sample queries on each step in [SampleQueries.md](https://github.com/isaacmillercodes/petstagram-graphql-backend/blob/step-3-pets/SampleQueries.md).
 
-Once you've experimented with our new resource, checkout to step-4-images-and-refactor or the *step 4 instructions* where we'll add our final type, Image, and clean up our project structure.
+Once you've experimented with our new resource, checkout to step-4-images-and-refactor or the [step four instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-4-images-and-refactor) where we'll add our final type, Image, and clean up our project structure.
