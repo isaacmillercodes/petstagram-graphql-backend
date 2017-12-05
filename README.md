@@ -1,4 +1,4 @@
-# Step 8: Adding Friends and Following Pets
+# Step Eight: Adding Friends and Following Pets
 
 Now that we can authenticate which user is logged in, we can add types for two new mutations: associating two users as friends and associating a user with a pet as a follower.
 
@@ -112,4 +112,4 @@ followPet: {
 
 Now our logged in users can send friend requests, accept friend requests, block users, and follow pets.
 
-In our next step, we'll add mutations to allow our users to add and like images. Checkout to branch `step-9-image-mutations` or head to the *step nine instructions.*
+In our next step, we'll add mutations to allow our users to add and like images. Checkout to branch `step-9-image-mutations` or head to the [step nine instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-9-image-mutations).
