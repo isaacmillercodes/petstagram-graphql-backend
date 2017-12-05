@@ -1,4 +1,4 @@
-# Step 3: Associating Multiple Types
+# Step Three: Associating Multiple Types
 
 Now that we have our User type, we can create our Pet type following the same conventions from step 2.
 
