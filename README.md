@@ -118,4 +118,4 @@ And that's it! You now have a fully functional GraphQL server featuring queries 
 
 From here, you could continue to explore creating types, queries, and mutations, or continue on through this tutorial if you'd like to get your project in sync with my [front end GraphQL tutorial](https://github.com/isaacmillercodes/petstagram-graphql-frontend) using React and Apollo.
 
-For the Petstagram front end, I want users to be able to register and log in. So in the next step, I'll be adding some simple auth. Checkout to `step-7-auth` or head to the *step seven instructions*.
+For the Petstagram front end, I want users to be able to register and log in. So in the next step, I'll be adding some simple auth. Checkout to `step-7-auth` or head to the [step seven instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-7-auth).
