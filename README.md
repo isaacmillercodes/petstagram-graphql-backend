@@ -1,4 +1,4 @@
-# Step 5: Add Pet Mutation
+# Step Five: Add Pet Mutation
 
 In the last step, we completed our queries for images, pets, and users. Now we want the ability to add a pet to our database, so we'll create our first mutation.
 
@@ -114,4 +114,4 @@ In Graph*i*QL, you'll see the aliases as keys in your response data:
 
 This is useful for the front end to be able to keep the response data organized and explicit for other developers working on the project. Since GraphQL allows us to make many queries and mutations at once, aliases are a good way to keep your code clean and manageable.
 
-We'll see this more in our next step as we create a new mutation to add a pet with their owner and profile image. Check out to `step-6-relational-mutation` or go to the *step six instructions*.
+We'll see this more in our next step as we create a new mutation to add a pet with their owner and profile image. Check out to `step-6-relational-mutation` or go to the [step six instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-6-relational-mutation).
