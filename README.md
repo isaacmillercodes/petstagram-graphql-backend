@@ -1,4 +1,4 @@
-# Step 4: Image Type and Project Clean Up
+# Step Four: Image Type and Project Clean Up
 
 Since we have created a root query with two types and are looking to add a third, it's a good time to clean up our project structure.
 
