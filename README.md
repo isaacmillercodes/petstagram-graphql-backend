@@ -50,4 +50,4 @@ likeImage: {
 }
 ```
 
-We now have all the mutations we need to build out a simple front end for Petstagram. If you'd like to continue on to my [front end GraphQL tutorial](https://github.com/isaacmillercodes/petstagram-graphql-frontend), checkout to `step-10-allow-cors` or head to the *step 10 instructions*.
+We now have all the mutations we need to build out a simple front end for Petstagram. If you'd like to continue on to my [front end GraphQL tutorial](https://github.com/isaacmillercodes/petstagram-graphql-frontend), checkout to `step-10-allow-cors` or head to the [step ten instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-10-allow-cors).
