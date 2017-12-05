@@ -126,4 +126,4 @@ If it does, we'll use `express-jwt` to create a new token that expires in 30 day
 
 If the passwords don't match or if we are unable to find a user with the corresponding email address, we send back an empty string as a token and a `user_id` of -1.
 
-Now that users can log in, we'll want to allow them to perform actions like following a pet and adding a user as a friend. Once you've had a chance to test the `addNewUser` and `loginUser` mutations, checkout to `step-8-meta-mutations` or head to the *step 8 instructions*
+Now that users can log in, we'll want to allow them to perform actions like following a pet and adding a user as a friend. Once you've had a chance to test the `addNewUser` and `loginUser` mutations, checkout to `step-8-meta-mutations` or head to the [step eight instructions](https://github.com/isaacmillercodes/petstagram-graphql-backend/tree/step-8-meta-mutations).
